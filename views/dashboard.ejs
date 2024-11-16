@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/public/css/app.css">
+    <script src="/public/js/sweetAlert.js"></script>
+    <title>Dash board</title>
+</head>
+<body>
+    <header class="text-gray-600 body-font nav_bar">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+           <img src="../public/assets/logo.png" class="app_logo" alt="logo">
+            <span class="ml-3 text-xl">Mark-Blocks</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900 cursor-pointer btn_signUp" href="#">Account</a>
+            <button id="logOut_btn" type="submit" class="mr-5 hover:text-gray-900 cursor-pointer btn_signIn">Logout</button>
+            <form action="/logout?_method=DELETE" hidden="true" method="post" id="logoutForm"></form>
+          </nav>
+        </div>
+     </header>
+    <h1>Welcome, <%= user.firstname + user.lastname %> </h1>
+    <script>
+        swal.fire({
+            icon: "success",
+            title: "Welcome",
+            text: `Welcome back, <%= user.lastname %>`,
+            position: "top-end",
+            showConfirmButton: false,
+            confirmButtonColor: "#326deb",
+            timer: 700,
+            timerProgressBar: true,
+         })
+    </script>
+    <script src="/public/js/dashboard.js"></script>
+</body>
+</html>

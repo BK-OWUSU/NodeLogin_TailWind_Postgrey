@@ -1,0 +1,95 @@
+* {
+  transition: 0.5s all ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.app_logo {
+  height: 3rem;
+  width: 3rem;
+}
+
+.nav_bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.scroll-bar {
+  background: #326deb;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.btn_signUp {
+  background-color: #eb323c;
+  color: #fff;
+  padding: 0.4rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  border: 1px solid transparent;
+  transition: 0.5s all ease;
+}
+
+.btn_signUp:hover {
+  background: transparent;
+  border-color: #eb323c;
+  transform: translateY(-0.2rem);
+}
+
+.btn_signIn {
+  padding: 0.4rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  border: 2px solid #071c4a;
+  transition: 0.5s all ease;
+}
+
+.btn_signIn-scroll {
+  color: #fff;
+  border-color:#cdd2dc;
+}
+
+.btn_signIn:hover {
+  background:#071c4a;
+  color: #fff;
+  border-color: #eb323c;
+  transform: translateY(-0.2rem);
+}
+
+.form_btn {
+  background: #326deb;
+  border-radius: 0.4rem;
+  border: 1px solid transparent;
+}
+
+.form_btn:hover {
+  background:#244da7;
+  color: #fff;
+  border-color: #fff;
+  transform: translateY(-0.2rem);
+}
+
+.signIn_cont {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  z-index: 999;
+}
+
+.signIn_cont.show {
+  transform: scale(1);
+  transition: 0.5s all ease;
+}

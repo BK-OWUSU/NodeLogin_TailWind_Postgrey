@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/public/assets/logo.png">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/public/css/app.css">
+    <script src="/public/js/sweetAlert.js"></script>
+    <title>Node & Tailwind</title>
+</head>
+<body>
+    <%- include('../src/components/header');%>
+    <%- include('../src/components/hero');%>
+    <%- include('../src/components/gallery');%>
+    <div class="signIn_cont"><%- include('../src/components/signUpForm');%></div>
+    <%- include('../src/components/contact');%>
+    <%- include('../src/components/footer');%>
+    <% if(response && response.isUserExist) { %>
+        <script>
+            swal.fire({
+                icon: "info",
+                title: "Registration Error",
+                text: "<%= response.message %>",
+                confirmButtonColor: "#d33",
+                footer: '<a href="/login">Login instead</a>'
+             })
+        </script>
+    <% } %>
+    <script src="/public/js/main.js"></script> 
+    <script src="/public/js/sweetAlert.js"></script> 
+</body> 
+</html>
